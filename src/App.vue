@@ -60,6 +60,20 @@
               <span class="hidden sm:inline">AI Chat</span>
               <span class="sm:hidden">AI</span>
             </router-link>
+
+            <!-- Ega Portfolio Link -->
+            <a
+              href="https://kuchkarov-portfolio.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nav-link-glass nav-link-glass-ega"
+            >
+              <span class="flex items-center gap-2">
+                <span class="text-sm">👨‍💻</span>
+                <span class="hidden sm:inline">Ega</span>
+                <span class="sm:hidden">Ega</span>
+              </span>
+            </a>
           </div>
         </div>
       </div>
@@ -181,6 +195,37 @@ const subscriptionBadgeClass = computed(() => {
   background: linear-gradient(135deg, rgba(168, 85, 247, 0.5), rgba(236, 72, 153, 0.5));
   color: rgba(255, 255, 255, 1);
   border-color: rgba(168, 85, 247, 0.6);
+}
+
+.nav-link-glass-ega {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), rgba(16, 185, 129, 0.3));
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  border-color: rgba(34, 197, 94, 0.4);
+  backdrop-filter: blur(20px);
+}
+
+.nav-link-glass-ega:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.4), rgba(16, 185, 129, 0.4));
+  color: rgba(255, 255, 255, 1);
+  border-color: rgba(34, 197, 94, 0.5);
+  transform: translateY(-1px);
+}
+
+.nav-link-glass-ega:hover span:first-child {
+  animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  60% {
+    transform: translateY(-1px);
+  }
 }
 
 /* iOS 16 Style Custom Scrollbar */

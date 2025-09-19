@@ -403,8 +403,8 @@ const formatExpiryDate = (date: Date) => {
 const initializeComponent = () => {
   // Check URL parameters for token
   const urlToken = route.query.token as string
-  if (urlToken) {
-    adminToken.value = urlToken
+  if (urlToken && urlToken.trim()) {
+    adminToken.value = urlToken.trim()
     handleTokenActivation()
     return
   }
